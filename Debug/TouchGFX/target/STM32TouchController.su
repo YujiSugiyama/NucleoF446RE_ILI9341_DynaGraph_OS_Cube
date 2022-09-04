@@ -1,0 +1,8 @@
+../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:30:13:touchgfx::TouchController::~TouchController()	16	static
+../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:30:13:virtual touchgfx::TouchController::~TouchController()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:110:17:static touchgfx::HAL* touchgfx::HAL::getInstance()	4	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:762:10:void touchgfx::HAL::setTouchSampleRate(int8_t)	16	static
+../TouchGFX/target/STM32TouchController.cpp:29:6:virtual void STM32TouchController::init()	16	static
+../TouchGFX/target/STM32TouchController.cpp:38:6:virtual bool STM32TouchController::sampleTouch(int32_t&, int32_t&)	40	static
+../TouchGFX/target/STM32TouchController.hpp:36:7:STM32TouchController::~STM32TouchController()	16	static
+../TouchGFX/target/STM32TouchController.hpp:36:7:virtual STM32TouchController::~STM32TouchController()	16	static

@@ -1,0 +1,5 @@
+../TouchGFX/gui/src/model/Model.cpp:17:1:Model::Model()	16	static
+../TouchGFX/gui/src/model/Model.cpp:24:6:void Model::tick()	24	static
+../TouchGFX/gui/src/model/Model.cpp:45:6:void Model::putData(float*, int)	24	static
+../TouchGFX/gui/src/model/Model.cpp:64:6:void shareModelInstance(Model*)	16	static
+../TouchGFX/gui/src/model/Model.cpp:71:17:void putData(float*)	16	static

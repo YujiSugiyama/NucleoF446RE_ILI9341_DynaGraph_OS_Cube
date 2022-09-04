@@ -1,0 +1,12 @@
+../Core/Src/xpt2046.c:51:13:XPT2046_SetCS	8	static
+../Core/Src/xpt2046.c:56:13:XPT2046_ResetCS	8	static
+../Core/Src/xpt2046.c:61:13:XPT2046_Write_Byte	16	static
+../Core/Src/xpt2046.c:71:17:XPT2046_Read_AD	24	static
+../Core/Src/xpt2046.c:95:13:sort	32	static
+../Core/Src/xpt2046.c:108:16:besttwoavg	24	static
+../Core/Src/xpt2046.c:124:6:XPT2046_Init	4	static
+../Core/Src/xpt2046.c:129:6:XPT2046_Update	56	static
+../Core/Src/xpt2046.c:230:9:XPT2046_IsReasonable	16	static
+../Core/Src/xpt2046.c:238:6:XPT2046_XPTtoILI	24	static
+../Core/Src/xpt2046.c:251:6:XPT2046_PutCalPoint	16	static
+../Core/Src/xpt2046.c:260:6:XPT2046_calibration	16	static

@@ -1,0 +1,212 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "CanvasBufferSize": 4800,
+        "Includes": "",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 320,
+            "Height": 240,
+            "Color": {
+              "Red": 10,
+              "Green": 17,
+              "Blue": 99
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 5,
+            "Y": 5,
+            "Width": 310,
+            "Height": 230,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "DynamicGraph",
+            "Name": "dynamicGraph1",
+            "X": 5,
+            "Y": 5,
+            "Width": 310,
+            "Height": 230,
+            "DataSeed": -366005806,
+            "NumberOfValues": 180,
+            "MaxY": 100.0,
+            "Precision": "1",
+            "UseCustomVisibleDataPointRange": true,
+            "LastIndex": 180,
+            "MapDataPointIndexToCustomValue": true,
+            "XAxisScale": 4.0,
+            "LabelSizeTop": 10,
+            "LabelSizeBottom": 10,
+            "LabelSizeLeft": 20,
+            "LabelSizeRight": 10,
+            "PaddingBottom": 1,
+            "PaddingLeft": 1,
+            "GraphType": "GraphWrapClear",
+            "GraphDrawers": [
+              {
+                "Type": "LineDrawer",
+                "LineWidth": 2,
+                "Color": {
+                  "Red": 32,
+                  "Green": 36,
+                  "Blue": 158
+                }
+              }
+            ],
+            "YAxisGrid": {
+              "Type": "GraphGrid",
+              "Color": {
+                "Red": 20,
+                "Green": 151,
+                "Blue": 197
+              },
+              "Interval": 25.0,
+              "LineWidth": 1,
+              "Alpha": 30
+            },
+            "YAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 25.0,
+              "DecimalSeparator": "Point",
+              "TextId": "dynamicGraph1Y",
+              "TextRotation": "0",
+              "Position": "Left"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 265,
+            "Y": 5,
+            "Width": 50,
+            "Height": 30,
+            "TextId": "textArea1",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box3",
+            "X": 265,
+            "Y": 5,
+            "Width": 50,
+            "Height": 30,
+            "Color": {
+              "Red": 20,
+              "Green": 151,
+              "Blue": 196
+            },
+            "Alpha": 128
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "X": 153,
+            "Y": 98,
+            "Width": 32,
+            "Height": 32,
+            "Alpha": 128,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "IconReleased": "__designer\\Dark_Icons_Pause_32.png",
+                "IconPressed": "__designer\\Dark_Icons_Pause_32.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerGraphClicked",
+              "TriggerComponent": "dynamicGraph1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "graphClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButton1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "graphPause"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "MyApplication",
+    "Resolution": {
+      "Width": 320,
+      "Height": 240
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 320,
+        "Height": 240
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F4",
+    "Platform": "m4",
+    "ProjectFile": "../NucleoF446RE_ILI9341_DynaGraph_OS_Cube.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": []
+  },
+  "Version": "4.20.0"
+}

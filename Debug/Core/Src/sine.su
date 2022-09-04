@@ -1,0 +1,2 @@
+../Core/Src/sine.c:17:6:initSin	16	static
+../Core/Src/sine.c:31:6:generateSin	32	static
