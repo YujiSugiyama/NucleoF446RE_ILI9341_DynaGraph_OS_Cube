@@ -18,6 +18,7 @@ public:
 
 protected:
 private:
+    int graphActive;
 #ifndef SIMULATOR
     int waveReady;
     float temp[3*5];

@@ -31,13 +31,13 @@ void initSin()
 void generateSin()
 {
   extern osMessageQueueId_t waveQueueHandle;
-  extern int graphActive;
+  extern int isSineActive();
   float ymaxH, ymaxM, ymaxL;
   float value;
 
   if(readyCount++ < 30) return;
 
-  if(graphActive){
+  if(isSineActive()){
     ymaxH = 2.0;  //2.0f
     ymaxM = 5.0;  //5.0f;
     ymaxL = 30.0;  //30.0f;

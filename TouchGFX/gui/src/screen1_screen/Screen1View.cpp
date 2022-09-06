@@ -9,11 +9,11 @@
 #include "stm32f4xx_hal_tim.h"
 #endif
 
-int graphActive = 0;
 
 Screen1View::Screen1View()
 {
-  ::graphActive = 1;
+  graphActive = 1;
+
 #ifndef SIMULATOR
   waveReady = 0;
 #else
@@ -25,12 +25,13 @@ Screen1View::Screen1View()
 
 void Screen1View::setupScreen()
 {
-    Screen1ViewBase::setupScreen();
+  Screen1ViewBase::setupScreen();
+  presenter->pause(graphActive);
 }
 
 void Screen1View::tearDownScreen()
 {
-    Screen1ViewBase::tearDownScreen();
+  Screen1ViewBase::tearDownScreen();
 }
 
 void Screen1View::graphClicked(AbstractDataGraph::GraphClickEvent value)
@@ -52,8 +53,9 @@ void Screen1View::graphPause()
   extern TIM_HandleTypeDef htim3;
 
   __HAL_TIM_DISABLE_IT(&htim3, TIM_IT_UPDATE);
-  ::graphActive ^= 1;
-  if(::graphActive == 1)
+  graphActive ^= 1;
+  presenter->pause(graphActive);
+  if(graphActive == 1)
     flexButton1.setIconBitmaps(Bitmap(BITMAP_DARK_ICONS_PAUSE_32_ID), Bitmap(BITMAP_DARK_ICONS_PAUSE_32_ID));
   else
     flexButton1.setIconBitmaps(Bitmap(BITMAP_DARK_ICONS_PLAY_32_ID), Bitmap(BITMAP_DARK_ICONS_PLAY_32_ID));
@@ -61,8 +63,8 @@ void Screen1View::graphPause()
 }
 #else
 {
-  ::graphActive ^= 1;
-  if(::graphActive == 1)
+  graphActive ^= 1;
+  if(graphActive == 1)
     flexButton1.setIconBitmaps(Bitmap(BITMAP_DARK_ICONS_PAUSE_32_ID), Bitmap(BITMAP_DARK_ICONS_PAUSE_32_ID));
   else
     flexButton1.setIconBitmaps(Bitmap(BITMAP_DARK_ICONS_PLAY_32_ID), Bitmap(BITMAP_DARK_ICONS_PLAY_32_ID));
@@ -97,7 +99,7 @@ void Screen1View::handleTickEvent()
   }
 //  __HAL_TIM_ENABLE_IT(&htim3, TIM_IT_UPDATE);
 #else
-  if(::graphActive){
+  if(graphActive){
     dynamicGraph1.addDataPoint((sin_lut[waveCount++] + 1.0f) * 40.0f);
     waveCount %= 360;
   }

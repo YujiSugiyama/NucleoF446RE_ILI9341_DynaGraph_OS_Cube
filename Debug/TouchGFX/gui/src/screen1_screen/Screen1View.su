@@ -179,13 +179,13 @@
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:22:13:virtual Screen1ViewBase::~Screen1ViewBase()	16	static
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:11:13:Screen1View::~Screen1View()	16	static
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:11:13:virtual Screen1View::~Screen1View()	16	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:14:1:Screen1View::Screen1View()	16	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:13:1:Screen1View::Screen1View()	16	static
 ../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:26:6:virtual void Screen1View::setupScreen()	16	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:31:6:virtual void Screen1View::tearDownScreen()	16	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:36:6:virtual void Screen1View::graphClicked(touchgfx::AbstractDataGraph::GraphClickEvent)	56	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:49:6:virtual void Screen1View::graphPause()	40	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:72:6:virtual void Screen1View::putData(float*, int)	32	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:86:6:virtual void Screen1View::handleTickEvent()	48	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:32:6:virtual void Screen1View::tearDownScreen()	16	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:37:6:virtual void Screen1View::graphClicked(touchgfx::AbstractDataGraph::GraphClickEvent)	56	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:50:6:virtual void Screen1View::graphPause()	40	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:74:6:virtual void Screen1View::putData(float*, int)	32	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:88:6:virtual void Screen1View::handleTickEvent()	48	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:59:18:void touchgfx::IconButtonStyle<T>::setIconBitmaps(const touchgfx::Bitmap&, const touchgfx::Bitmap&) [with T = touchgfx::ClickButtonTrigger]	40	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:137:18:void touchgfx::IconButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:59:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static

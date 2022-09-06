@@ -22,3 +22,8 @@ void Screen1Presenter::putData(float* wave, int n)
   view.putData(wave, n);
 }
 
+void Screen1Presenter::pause(int active)
+{
+  model->pause(active);
+}
+

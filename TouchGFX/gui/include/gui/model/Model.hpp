@@ -15,6 +15,8 @@ public:
 
     void tick();
     void putData(float* wave, int n);
+    void pause(int active);
+    int sineActive;
 
 protected:
     ModelListener* modelListener;

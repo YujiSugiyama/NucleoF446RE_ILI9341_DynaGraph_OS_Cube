@@ -29,6 +29,8 @@ public:
 
     virtual void putData(float* wave, int n);
 
+    virtual void pause(int active);
+
 private:
     Screen1Presenter();
 

@@ -55,6 +55,11 @@ void Model::putData(float* wave, int n)
   modelListener->putData(wave, n);
 }
 
+void Model::pause(int active)
+{
+  sineActive = active;
+}
+
 /*
  * -------------------------------------- Model instance --------------------------------------
  * The below functions are not member of Model class but normal function to disclose Model instance to the public.
@@ -71,6 +76,11 @@ void shareModelInstance(Model *m)
 extern "C" void putData(float *wave)
 {
   pmodel->putData(wave, 1);
+}
+
+extern "C" int isSineActive(void)
+{
+  return pmodel->sineActive;
 }
 #endif
 
