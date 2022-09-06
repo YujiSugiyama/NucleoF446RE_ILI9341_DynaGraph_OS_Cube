@@ -68,7 +68,7 @@ const osThreadAttr_t taskGUI_attributes = {
 osThreadId_t taskEsp32Handle;
 const osThreadAttr_t taskEsp32_attributes = {
   .name = "taskEsp32",
-  .stack_size = 256 * 4,
+  .stack_size = 1024 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for taskWave */
@@ -621,7 +621,8 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void __io_putchar(uint8_t ch)
 {
-  HAL_UART_Transmit(&huart2, &ch, 1, 1);
+  while(HAL_UART_Transmit(&huart2, &ch, 1, 10) == HAL_BUSY)
+    osDelay(10);
 }
 
 int __io_getchar(void)
@@ -629,16 +630,19 @@ int __io_getchar(void)
   HAL_StatusTypeDef Status = HAL_BUSY;
   uint8_t Data;
 
-  while(Status != HAL_OK)
+  while(Status != HAL_OK){
     Status = HAL_UART_Receive(&huart2, &Data, 1, 10);
-
+    osDelay(10);
+  }
   return Data;
 }
 
 int _writex(UART_HandleTypeDef *huart, uint8_t *ptr, int len)
 {
-  HAL_UART_Transmit(huart, (uint8_t *)ptr, len, 0);
-  return len;
+  if(HAL_UART_Transmit(huart, (uint8_t *)ptr, len, 1) != HAL_OK)    // Needs 1msec timeout, otherwise consecutive data is not sent.
+    return 0;
+  else
+    return len;
 }
 
 int _readx(UART_HandleTypeDef *huart, uint8_t *ptr, int len)
@@ -687,6 +691,28 @@ void StartTaskEsp32(void *argument)
 {
   /* USER CODE BEGIN StartTaskEsp32 */
   /* Infinite loop */
+  extern int esp32_init(void);
+  extern int esp32_echo(void);
+  extern int server_init(void);
+  extern void dispatch_server(void);
+
+  while(!esp32_init()){
+    printf("[ESP32]: Failed to init esp32\n");
+  }
+
+  while(!server_init()){
+    printf("[Server]: Failed to start server\n");
+  }
+
+  uint8_t c;
+  if(_readx(&huart2, &c, 1) && c==0x03)       // CTRL^C
+    goto echo;
+  else
+    dispatch_server();
+
+echo:
+  esp32_echo();
+  printf("[Echo mode]: Now it is ESP32 echo mode\n");
   for(;;)
   {
     uint8_t c;

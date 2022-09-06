@@ -1,0 +1,34 @@
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+fp/hard/bits/gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\c++\10.3.1\bits\basic_string.h:6568:3:int std::__cxx11::stoi(const string&, std::size_t*, int)	32	static
+../Core/Src/esp32.cpp:28:13:void uart_putc(UART_HandleTypeDef*, char)	24	static
+../Core/Src/esp32.cpp:36:13:void uart_puts(UART_HandleTypeDef*, const char*)	24	static
+../Core/Src/esp32.cpp:46:12:int uart_getc(UART_HandleTypeDef*)	24	static
+../Core/Src/esp32.cpp:56:17:uint32_t get_absolute_time()	8	static
+../Core/Src/esp32.cpp:60:16:int32_t absolute_time_diff_us(uint32_t, uint32_t)	16	static
+../Core/Src/esp32.cpp:67:12:int getATdata(int)	24	static
+../Core/Src/esp32.cpp:84:5:int recvIPD(int32_t)	32	static
+../Core/Src/esp32.cpp:112:7:char* recvBody(int, int32_t)	48	static
+../Core/Src/esp32.cpp:145:6:bool sendATCommand(const char*, int32_t, const char*, const bool&)	560	static
+../Core/Src/esp32.cpp:253:6:bool sendATCommandOK(const char*, int32_t, const bool&)	24	static
+../Core/Src/esp32.cpp:258:6:bool clearATBuffer(int32_t)	24	static
+../Core/Src/esp32.cpp:264:13:std::string getParam(int, char, char, std::string)	488	static
+../Core/Src/esp32.cpp:281:13:std::string getParamEx(const char*, char, const char*)	264	static
+../Core/Src/esp32.cpp:301:6:void sendResponse(const char*, const char*, const char*, const char*, int, int)	1104	static
+../Core/Src/esp32.cpp:379:6:void sendMessage(const char*, const char*)	1056	static
+../Core/Src/esp32.cpp:396:13:std::string getIp()	72	static
+../Core/Src/esp32.cpp:410:13:std::string getSDKVersion()	72	static
+../Core/Src/esp32.cpp:430:5:int getWifiState()	88	static
+../Core/Src/esp32.cpp:449:6:bool setupUTCTime()	16	static
+../Core/Src/esp32.cpp:501:5:int getHeaderContentValue(const char*, const char*)	56	static
+../Core/Src/esp32.cpp:514:13:std::string getHeaderContentStr(const char*, const char*)	56	static
+../Core/Src/esp32.cpp:529:16:int esp32_init()	48	static
+../Core/Src/esp32.cpp:561:16:int esp32_echo()	16	static
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\c++\10.3.1\ext\string_conversions.h:63:2:)::_Save_errno::_Save_errno() [with _TRet = long int; _Ret = int; _CharT = char; _Base = {int}]	16	static
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\c++\10.3.1\ext\string_conversions.h:64:2:)::_Save_errno::~_Save_errno() [with _TRet = long int; _Ret = int; _CharT = char; _Base = {int}]	16	static
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\c++\10.3.1\ext\string_conversions.h:73:4:)::_Range_chk::_S_chk(_TRet, std::true_type) [with _TRet = long int; _Ret = int; _CharT = char; _Base = {int}]	16	static
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\c++\10.3.1\ext\string_conversions.h:54:5:) [with _TRet = long int; _Ret = int; _CharT = char; _Base = {int}]	56	static
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\c++\10.3.1\bits\postypes.h:143:7:std::fpos<_StateT>::operator std::streamoff() const [with _StateT = _mbstate_t]	16	static
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\c++\10.3.1\bits\basic_string.h:6528:5:std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	24	static
+../Core/Src/esp32.cpp:569:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/esp32.cpp:569:1:cpp)	8	static
+../Core/Src/esp32.cpp:569:1:cpp)	8	static
